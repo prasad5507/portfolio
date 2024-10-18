@@ -42,7 +42,7 @@ const portfolioProjects = [
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://resonant-squirrel-8a5cad.netlify.app",
+    link: "https://tourmaline-snickerdoodle-d5d10a.netlify.app",
     image: aiStartupLandingPage,
   },
 ];
