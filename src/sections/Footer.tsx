@@ -10,7 +10,7 @@ const footerLinks = [
   },
   {
     title: "Github",
-    href: "https://github.com/prasad5507/prasad5507",
+    href: "https://github.com/prasad5507",
   },
   {
     title: "LinkedIn",
