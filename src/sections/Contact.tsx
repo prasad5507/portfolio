@@ -24,7 +24,7 @@ export const ContactSection = () => {
             <div>
               <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900">
                 <a
-                  href="https://wa.me/+918767964653?text=urlencodedtext"
+                  href="https://wa.me/+918767964653?text=Hi Prasad"
                   target="_blank"
                 >
                   <span className="font-semibold"> Contact Me</span>
