@@ -1,6 +1,19 @@
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
+import { useEffect, useState } from "react";
+
 export const ContactSection = () => {
+  const [whatsappLink, setWhatsappLink] = useState("");
+
+  useEffect(() => {
+    const currentDate = new Date().toLocaleDateString();
+    const currentTime = new Date().toLocaleTimeString();
+    const message = `Hi Prasad, I visited your portfolio on ${currentDate} at ${currentTime} and would like to connect with you!`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappNumber = "+918767964653"; // Replace with your number
+    setWhatsappLink(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`);
+  }, []);
+
   return (
     <div className="py-16 pt-12 lg:py-24 lg:pt-20" id="contact">
       <div className="container">
@@ -14,19 +27,16 @@ export const ContactSection = () => {
           <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
             <div>
               <h2 className="font-serif text-2xl md:text-3xl">
-                Let&apos;s create something amazing togather{" "}
+                Let&apos;s create something amazing together{" "}
               </h2>
               <p className="text-sm mt-2 md:text-base">
                 Ready to bring your next project to life? Let&apos;s connect and
-                disscuss how I can help you achive your goals.
+                discuss how I can help you achieve your goals.
               </p>
             </div>
             <div>
               <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900">
-                <a
-                  href="https://wa.me/+918767964653?text=Hi Prasad"
-                  target="_blank"
-                >
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                   <span className="font-semibold"> Contact Me</span>
                 </a>
                 <ArrowUpRightIcon className="size-4" />
